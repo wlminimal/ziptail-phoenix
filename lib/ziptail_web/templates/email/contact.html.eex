@@ -1,0 +1,7 @@
+<h1>Customer contact us</h1>
+<h3>Name</h3>
+<p><strong><%= @name %></strong></p>
+<h3>Email</h3>
+<p><strong><%= @email %></strong></p>
+<h3>Message</h3>
+<p><strong><%= @message %></strong></p>

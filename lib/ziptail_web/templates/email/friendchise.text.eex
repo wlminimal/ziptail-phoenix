@@ -1,0 +1,11 @@
+Friendchise Request
+
+First Name:  <%= @firstname %>
+Last Name:   <%= @lastname %>
+Address:     <%= @address %>
+City:        <%= @city %>
+State:       <%= @state %>
+Zipcode:     <%= @zipcode %>
+Phone:       <%= @phone %>
+Email:       <%= @email %>
+Message:     <%= @message %>

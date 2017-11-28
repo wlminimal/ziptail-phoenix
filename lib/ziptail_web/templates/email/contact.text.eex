@@ -1,0 +1,11 @@
+Customer contact us
+Name
+<%= @name %>
+
+
+Email
+<%= @email %>
+
+
+Message
+<%= @message %>

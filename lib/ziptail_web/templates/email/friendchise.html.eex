@@ -1,0 +1,20 @@
+<h1>Friendchise Request</h1>
+
+<p>First Name:</p>
+<p><strong><%= @firstname %></strong> </p>  
+<p>Last Name:</p>
+<p><strong><%= @lastname %></strong>	</p>  
+<p>Address:</p>
+<p><strong><%= @address %></strong></p>
+<p>City:</p>
+<p><strong><%= @city %></strong></p>
+<p>State:</p>
+<p><strong><%= @state %></strong></p>
+<p>Zipcode:</p>
+<p><strong><%= @zipcode %></strong></p>
+<p>Phone:</p>
+<p><strong><%= @phone %></strong></p>
+<p>Email:</p>
+<p><strong><%= @email %></strong></p>
+<p>Message:</p>
+<p><strong><%= @message %></strong></p>

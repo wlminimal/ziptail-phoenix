@@ -1,0 +1,195 @@
+<div class="menu-content-section">
+    <div class="header-image-wrapper">
+    	<img src="<%= static_path(@conn, "/images/logo-text.png") %>" width="690" srcset="<%= static_path(@conn, "/images/logo-text-p-500.png 500w, /images/logo-text-p-800.png 800w, /images/logo-text-p-1080.png 1080w, /images/logo-text.png 1380w") %>" sizes="45vw">
+    </div>
+    <div class="menu-content">
+    	<h6 class="menu-heading"><%= content(@conn, "drink", :text, do: "Drink") %></h6> 
+
+      <div class="divider"></div>
+      <%= content(@conn, "Kahlua Milk", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Kahlua Milk</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">coffee, milk</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">5</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Mexican Horchata", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Mexican Horchata</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">maple syrup, rice milk, cinamon star</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">5</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <h6 class="menu-heading"><%= content(@conn, "Slush", :text, do: "Slush") %></h6>
+      <div class="divider"></div>
+      <div class="no-blend w-row">
+        <div class="w-col w-col-6">
+          <p class="menu-sub"></p>
+        </div>
+        <%= content(@conn, "no blend", :html) do %>
+        <div class="w-col w-col-6">
+          <p class="drink-price menu-sub">no blend</p>
+        </div>
+        <% end %>
+      </div>
+      <%= content(@conn, "Blue Hawaii", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Blue Hawaii</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">coco, pineapple, blue curasco</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Cinderella", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Cinderella</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">pineapple, orange, lyche (option grenadline)</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Gold Medalist", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Gold Medalist</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">caramel, cinnamon, lemon, orange</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "June Bug", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">June Bug</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">banana, lemon, pineapple, coco, melon, cherry G</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Mai Tai", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Mai Tai</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">caramel, lime, orange, lime garnish</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Mango Margarita", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Mango Margarita</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">mango, lime, orange, lime garnish</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Peach Crush", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Peach Crush</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">peach, cranberry, lemon, lime</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Pina Colada", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Pina Colada</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">pineappele, coconut, lime, mint, white rum</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Shelly Temple", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Shelly Temple</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">agave, cherry, water, vanilla extract, lemon, lime</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Singapore Sling", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Singapore Sling</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">orange, pineapple, lime, grenadine, cherry</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= content(@conn, "Watermelon Bomb", :html) do %>
+      <div class="menu-content-holder">
+        <p class="menu-name">Watermelon Bomb</p>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <p class="menu-sub">watermelon, mint, sugar</p>
+          </div>
+          <div class="w-col w-col-6">
+            <p class="drink-price menu-sub">7</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <div class="divider"></div>
+      <%= content(@conn, "location", :html) do %>
+      <p class="paragraph-4">1301 OCEAN FRONT WALK #17, VENICE, CA 90291<br>+2137186360 // GOZIPTAIL.COM</p>
+      <% end %>
+    </div>
+  </div>

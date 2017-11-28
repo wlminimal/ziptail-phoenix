@@ -1,0 +1,30 @@
+<section>
+    <section class="navbar w-clearfix w-hidden-small w-hidden-tiny">
+      <a href="/" class="brand-logo w-nav-brand">
+        <img src="<%= static_path(@conn, "/images/ziptail-webclip.png") %>" width="70" class="image-6 w-hidden-small w-hidden-tiny">
+      </a>
+      <a href="#" data-ix="menu-click" class="menu-bars w-inline-block">
+        <img src="<%= static_path(@conn, "/images/menu.svg") %>" height="24">
+      </a>
+      <div data-ix="hide-nav-on-load" class="menu">
+        <%= link "Menu", to: menu_path(@conn, :show), class: "nav-link" %>
+        <%= link "Contact", to: contact_path(@conn, :show), class: "nav-link" %>
+        <%= link "Friendchise", to: friendchise_path(@conn, :show), class: "nav-link" %>
+      </div>
+    </section>
+  </section>
+  <div data-collapse="small" data-animation="over-right" data-duration="400" class="navbar-2 w-hidden-main w-hidden-medium w-nav">
+    <div class="w-container">
+      <a href="#" class="w-nav-brand">
+        <img src="<%= static_path(@conn, "/images/ziptail-webclip.png") %>" width="65">
+      </a>
+      <nav role="navigation" class="nav-menu-2 w-nav-menu">
+        <%= link "Menu", to: menu_path(@conn, :show), class: "nav-link-2 w-nav-link" %>
+        <%= link "CONTACT", to: contact_path(@conn, :show), class: "nav-link-2 w-nav-link" %>
+        <%= link "FRIENDCHISE", to: friendchise_path(@conn, :show), class: "nav-link-2 w-nav-link" %>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="icon w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,65 @@
+<section id="Home" data-ix="home-section" class="full-section home-section">
+	<img src="<%= static_path(@conn, "/images/coming-soon_1.png") %>" width="350" srcset="<%= static_path(@conn, "/images/coming-soon_1-p-500.png 500w, /images/coming-soon_1-p-800.png 800w, /images/coming-soon_1.png 1000w") %>" sizes="(max-width: 767px) 100vw, 350px" class="image-5">
+</section>
+  <section class="main-site-content">
+    <section id="About-Us">
+      <section class="depth-section section">
+        <div class="w-container">
+        	<%= content(@conn, "subscribe-content", :html) do %>
+	          <h6 data-ix="slide-down-on-scroll" class="heading-4">Enjoy your life, Enjoy your <span class="text-span">Ziptail</span></h6>
+	          <p data-ix="slide-up-on-scroll" class="style-p">Subscribe our email and text message for special event and discount coupon.</p>
+          <% end %>
+          <%= unless get_flash(@conn, :info) == nil do %>
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong><%= get_flash(@conn, :info) %></strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <% end %>
+          <div class="form-block w-form">
+      		
+            <%= form_for @conn, page_path(@conn, :create), [as: :subscribe, id: "email-form", class: "form"], fn f -> %>
+							<%= text_input f, :email, class: "form text-field-2 w-input", placeholder: "Enter your email", required: true %>
+							<%= error_tag f, :email %>
+							<%= text_input f, :phone, class: "form text-field-2 w-input", placeholder: "Enter your phone number" %>
+							<%= error_tag f, :phone %>
+							<%= submit "Subscribe", class: "submit-button-2 w-button" %>
+            <% end %>
+          
+          </div>
+        </div>
+      </section>
+      
+      <section class="section style-section">
+        <div class="w-container wide-container">
+          <div class="w-row">
+            <div class="column w-col w-col-6 w-col-stack">
+							<%= content(@conn, "about ziptail", :html) do %>
+              <div class="big-heading">ABOUT<br>   <span class="faded">ZIPTAIL</span></div>
+              
+              <p data-ix="slide-up-on-scroll" class="style-p">In case you haven’t noticed yet, we sway towards black and white. We love the contrast it affords us as a medium, as well as both the depth &amp; originality it affords to bring a new take on what was already experienced with the eyes previously.</p>
+           		
+              <div class="div-block-2">
+              	<a href="lets-drink.html" class="button-2 w-button">Let&#x27;s Drink</a>
+              	<a href="contact.html" class="button-2 w-button">Say Hi</a>
+              	<a href="#" class="button-2 w-button">Let&#x27;s be friendChise</a>
+              </div>
+							<% end %>
+            </div>
+            <div class="column w-col w-col-6 w-col-stack">
+              <div class="w-row">
+                <div class="w-col w-col-6">
+                	<img src="<%= static_path(@conn, "/images/pexels-photo-347955.jpeg") %>" data-ix="slide-up-on-scroll" sizes="(max-width: 767px) 100vw, 1vw" class="style-image-left">
+                </div>
+                <div class="w-col w-col-6">
+                	<img src="<%= static_path(@conn, "/images/pexels-photo-96974.jpeg") %>" data-ix="slide-up-on-scroll" srcset="<%= static_path(@conn, "/images/pexels-photo-96974-p-500.jpeg 500w, /images/pexels-photo-96974-p-1080.jpeg 1080w, /images/pexels-photo-96974-p-1600.jpeg 1600w, /images/pexels-photo-96974-p-2000.jpeg 2000w, /images/pexels-photo-96974.jpeg 2500w") %>" sizes="100vw" class="style-image-right">
+                	<img src="<%= static_path(@conn, "/images/alison-marras-323013.jpg") %>" data-ix="slide-up-on-scroll" srcset="<%= static_path(@conn, "/images/alison-marras-323013-p-500.jpeg 500w, /images/alison-marras-323013-p-800.jpeg 800w, /images/alison-marras-323013-p-1080.jpeg 1080w, /images/alison-marras-323013-p-1600.jpeg 1600w, /images/alison-marras-323013-p-2000.jpeg 2000w, /images/alison-marras-323013-p-2600.jpeg 2600w, /images/alison-marras-323013.jpg 2848w") %>" sizes="100vw">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>

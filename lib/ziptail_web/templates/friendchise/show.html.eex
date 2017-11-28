@@ -1,0 +1,102 @@
+  <section id="Home" class="contact franchise full-section home-section"></section>
+   	
+
+  <section class="contact-section section">
+	
+    <div class="w-container wide-container">
+    	
+      <h2 class="menu-title"><%= content(@conn, "FriendChise Opportunity", :text, do: "FriendChise Opportunity") %></h2>
+      
+      <%= unless get_flash(@conn, :info) == nil do %>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong><%= get_flash(@conn, :info) %></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <% end %>
+      
+      <div class="div-block-3"></div>
+      <div class="div-block-4">
+        <div class="w-form">
+       
+
+          <%= form_for @conn, friendchise_path(@conn, :create), [as: :friendchise, class: "form-3"], fn f -> %>
+						
+						<div class="w-row">
+							
+							<div class="w-col w-col-6">
+								<%= content(@conn, "first_name", :html) do %>
+								<%= label f, :first_name, class: "label" %>
+								<% end %>
+								<%= text_input f, :first_name, class: "text-field w-input", required: true, maxlength: 256 %>
+
+							</div>
+
+							<div class="w-col w-col-6">
+								<%= content(@conn, "last_name", :html) do %>
+								<%= label f, :last_name, class: "label" %>
+								<% end %>
+								<%= text_input f, :last_name, class: "text-field w-input", required: true, maxlength: 256 %>
+							</div>
+						</div>
+						
+						<div class="w-row">
+							<div class="w-col w-col-6">
+								<%= content(@conn, "address", :html) do %>
+								<%= label f, :address, class: "label" %>
+								<% end %>
+								<%= text_input f, :address, class: "text-field w-input", required: true, maxlength: 256 %>
+							</div>
+							<div class="w-col w-col-6">
+								<%= content(@conn, "city", :html) do %>
+								<%= label f, :city, class: "label" %>
+								<% end %>
+								<%= text_input f, :city, class: "text-field w-input", required: true, maxlength: 256 %>
+							</div>
+						</div>
+						<div class="w-row">
+							<div class="w-col w-col-6">
+								<%= content(@conn, "state", :html) do %>
+								<%= label f, :state, class: "label" %>
+								<% end %>
+								<%= text_input f, :state, class: "text-field w-input", required: true, maxlength: 256 %>
+							</div>
+							<div class="w-col w-col-6">
+								<%= content(@conn, "zipcode", :html) do %>
+								<%= label f, :zipcode, class: "label" %>
+								<% end %>
+								<%= text_input f, :zipcode, class: "text-field w-input", required: true, maxlength: 256 %>
+							</div>
+						</div>
+						<div class="w-row">
+							<div class="w-col w-col-6">
+								<%= content(@conn, "phone", :html) do %>
+								<%= label f, :phone, class: "label" %>
+								<% end %>
+								<%= text_input f, :phone, class: "text-field w-input", required: true, maxlength: 256 %>
+							</div>
+							<div class="w-col w-col-6">
+								<%= content(@conn, "email", :html) do %>
+								<%= label f, :email, class: "label" %>
+								<% end %>
+								<%= text_input f, :email, class: "text-field w-input", required: true, maxlength: 256 %>
+							</div>
+						</div>
+						<div class="w-row">
+							<div class="w-col w-col-10 w-col-medium-10 w-col-small-10">
+								<%= content(@conn, "message", :html) do %>
+								<%= label f, :message, class: "label" %>
+								<% end %>
+								<%= textarea f, :message, class: "message text-field w-input", required: true, maxlength: 5000 %>
+							</div>
+
+							<div class="column-3 w-col w-col-2 w-col-medium-2 w-col-small-2">
+              	<%= submit "Submit", class: "button franchise submit-button w-button" %>
+              </div>
+						</div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>

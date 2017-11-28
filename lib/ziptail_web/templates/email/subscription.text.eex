@@ -1,0 +1,7 @@
+Customer Subscription
+Customer Information
+Email Address
+<%= @email %>
+
+Phone Number
+<%= @phone %>

@@ -1,0 +1,8 @@
+<div>
+	<h1>Customer Subscription</h1>
+	<h3>Customer Information</h3>
+	<p>Email Address</p>
+	<p><strong><%= @email %></strong></p>
+	<p>Phone Number</p>
+	<p><strong><%= @phone %></p>
+</div>

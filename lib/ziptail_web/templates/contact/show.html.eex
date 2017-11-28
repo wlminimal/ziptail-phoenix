@@ -1,0 +1,81 @@
+<section id="Home" class="contact full-section home-section"></section>
+
+  <section class="contact-section section">
+    <div class="w-container wide-container">
+
+
+
+      <h2 class="menu-title"><%= content(@conn, "Contact Title", :text, do: "Say 'HI' to ziptail team!") %></h2>
+      <%= unless get_flash(@conn, :info) == nil do %>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong><%= get_flash(@conn, :info) %></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <% end %>
+      <div class="div-block-3"></div>
+      <div class="w-row">
+        <div class="w-col w-col-7 w-col-stack">
+
+          <div class="w-form">
+            <%= form_for @conn, contact_path(@conn, :create), [as: :contact, id: "email-form", class: "form-2"], fn f -> %>
+							<div class="w-col w-col-6 w-col-medium-6 w-col-small-6 w-col-tiny-tiny-stack">
+                <%= content(@conn, "name", :html) do %>
+              	<%= label f, :name, class: "label" %>
+                <% end %>
+              	<%= text_input f, :name, class: "text-field w-input", required: true, maxlength: 256 %>
+              </div>
+              <div class="w-col w-col-6 w-col-medium-6 w-col-small-6 w-col-tiny-tiny-stack">
+                <%= content(@conn, "email", :html) do %>
+              	<%= label f, :email, class: "label" %>
+                <% end %>
+              	<%= text_input f, :email, class: "text-field w-input", required: true, maxlength: 256 %>
+              </div>
+              <div class="w-row">
+              	<div class="w-col w-col-10 w-col-medium-10 w-col-small-10">
+                  <%= content(@conn, "message", :html) do %>
+              		<%= label f, :message, class: "label" %>
+                  <% end %>
+              		<%= textarea f, :message, class: "message text-field w-input", required: true, maxlength: 5000 %>
+              	</div>
+              	 <div class="w-col w-col-2 w-col-medium-2 w-col-small-2">
+                  <%= submit "Submit", class: "button submit-button w-button" %>
+	              </div>
+              </div>
+            <% end %>
+            
+            <div class="success w-form-done">
+              <p>Thank you! Your submission has been received!</p>
+            </div>
+            <div class="error w-form-fail">
+              <p>Oops! Something went wrong while submitting the form :(</p>
+            </div>
+          </div>
+          
+          <div class="row w-row">
+            <div class="portfolio-column w-col w-col-4 w-col-small-4">
+              <a href="#" class="w-inline-block w-lightbox">
+                <img src="<%= static_path(@conn, "/images/contact-banner-1.jpg") %>">
+              </a>
+            </div>
+            <div class="portfolio-column w-col w-col-4 w-col-small-4">
+              <div class="contact-card portfolio-card">
+                <%= content(@conn, "contact-h2", :html) do %>
+                <h2 class="contact-h2">1301 OCEAN FRONT WALK #17<br>VENICE, CA 90291</h2>
+                <% end %>
+              </div>
+            </div>
+            <div class="portfolio-column w-col w-col-4 w-col-small-4">
+              <a href="#" class="w-inline-block w-lightbox">
+                <img src="<%= static_path(@conn, "/images/contact-banner-2.jpg") %>">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column-2 w-col w-col-5 w-col-stack">
+          <div data-widget-latlng="33.9885019,-118.4747578" data-widget-zoom="15" data-disable-scroll="1" data-disable-touch="1" class="w-widget w-widget-map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
