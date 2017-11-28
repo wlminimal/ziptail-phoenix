@@ -18,7 +18,7 @@ config :ziptail, ZiptailWeb.Endpoint,
   url: [scheme: "https", host: "sheltered-earth-85302.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  secret_key_base: Map.fetch!(System.get_env(), 'SECRET_KEY_BASE')
+  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
 
 config :ziptail, Ziptail.Repo,
 	adapter: Ecto.Adapters.Postgres,
