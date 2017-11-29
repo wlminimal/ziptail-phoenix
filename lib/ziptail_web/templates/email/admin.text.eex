@@ -1,0 +1,5 @@
+Here is your login link. It will expire in 10 min.
+
+Copy and paste in address bar in your browser.
+
+<%= @link %>

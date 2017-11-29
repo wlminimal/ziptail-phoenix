@@ -1,6 +1,8 @@
 defmodule ZiptailWeb.SessionController do
 	use ZiptailWeb, :controller
 	alias Ziptail.Account
+	alias Ziptail.Mailer
+	alias ZiptailWeb.Email
 
 
 	def new(conn, _) do
@@ -20,6 +22,10 @@ defmodule ZiptailWeb.SessionController do
 				IO.puts("+++++++++++++++++++++++")
         IO.puts(link)
         IO.puts("+++++++++++++++++++++++")
+
+        Email.admin_email(email, link)
+        |> Mailer.deliver_later
+        
 				conn
 				|> put_flash(:info, "We sent you an email link. Please check your email.")
 				|> render(:new)

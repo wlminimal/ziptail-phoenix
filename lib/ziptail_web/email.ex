@@ -34,6 +34,17 @@ defmodule ZiptailWeb.Email do
 		|> render(:friendchise)
 	end
 
+	# Admin login
+	def admin_email(email, link) do
+		new_email()
+		|> subject("Ziptail Admin Login Link")
+		|> to(email)
+		|> from("info@goziptail.com")
+		|> put_html_layout({ZiptailWeb.LayoutView, "email.html"})
+		|> assign(:link, link)
+		|> render(:admin)
+	end
+
 	defp generate_email() do
 		new_email()
 		|> to("info@goziptail.com")

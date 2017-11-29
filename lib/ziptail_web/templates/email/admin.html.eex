@@ -1,0 +1,4 @@
+<h1>Here is your login link. It will expire in 10 min.</h1>
+<h1>Copy and paste in address bar in your browser.</h1>
+
+<a href="<%= @link %>">Admin Login</a>
