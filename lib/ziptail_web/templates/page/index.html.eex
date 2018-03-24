@@ -20,9 +20,9 @@
           <div class="form-block w-form">
       		
             <%= form_for @conn, page_path(@conn, :create), [as: :subscribe, id: "email-form", class: "form"], fn f -> %>
-							<%= text_input f, :email, class: "form text-field-2 w-input", placeholder: "Enter your email", required: true %>
+							<%= email_input f, :email, class: "form text-field-2 w-input", placeholder: "Enter your email", required: true %>
 							<%= error_tag f, :email %>
-							<%= text_input f, :phone, class: "form text-field-2 w-input", placeholder: "Enter your phone number" %>
+							<%= telephone_input f, :phone, class: "form text-field-2 w-input", placeholder: "Phone number, ex) 123-444-2222", pattern: "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"%>
 							<%= error_tag f, :phone %>
 							<%= submit "Subscribe", class: "submit-button-2 w-button" %>
             <% end %>
@@ -41,9 +41,9 @@
               <p data-ix="slide-up-on-scroll" class="style-p">In case you haven’t noticed yet, we sway towards black and white. We love the contrast it affords us as a medium, as well as both the depth &amp; originality it affords to bring a new take on what was already experienced with the eyes previously.</p>
            		
               <div class="div-block-2">
-              	<a href="lets-drink.html" class="button-2 w-button">Let&#x27;s Drink</a>
-              	<a href="contact.html" class="button-2 w-button">Say Hi</a>
-              	<a href="#" class="button-2 w-button">Let&#x27;s be friendChise</a>
+              	<a href="<%= menu_path(@conn, :show) %>" class="button-2 w-button">Let&#x27;s Drink</a>
+              	<a href="<%= contact_path(@conn, :show) %>" class="button-2 w-button">Say Hi</a>
+              	<a href="<%= friendchise_path(@conn, :show) %>" class="button-2 w-button">Let&#x27;s be friendChise</a>
               </div>
 							<% end %>
             </div>

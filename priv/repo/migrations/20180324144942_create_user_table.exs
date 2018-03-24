@@ -1,4 +1,4 @@
-defmodule Ziptail.Repo.Migrations.CreateUsers do
+defmodule Ziptail.Repo.Migrations.CreateUserTable do
   use Ecto.Migration
 
   def change do

@@ -48,11 +48,15 @@ config :logger, :console, format: "[$level] $message\n"
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
 
+# Email
+# config :ziptail, Ziptail.Mailer,
+#   adapter: Bamboo.LocalAdapter
+
 # Configure your database
 config :ziptail, Ziptail.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "postgres", #System.get_env("USER"),
+  password: "postgres", #System.get_env("PASSWORD"),
   database: "ziptail_dev",
   hostname: "localhost",
   pool_size: 10
